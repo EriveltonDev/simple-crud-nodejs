@@ -12,8 +12,6 @@ export class CreateUserController {
             name
         })
 
-        console.log(result)
-
         return response.status(201).json(result)
     }
 }
