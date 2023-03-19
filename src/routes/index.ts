@@ -6,11 +6,3 @@ export const routes = Router()
 
 routes.use('/user', userRouter)
 routes.use('/post', postRouter)
-
-
-
-
-
-
-
-

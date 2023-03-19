@@ -1,8 +1,8 @@
-import { Request, Response } from "express";
-import { GetPostsUseCase } from "./get-posts-usecase";
+import { type Request, type Response } from 'express'
+import { GetPostsUseCase } from './get-posts-usecase'
 
 export class GetPostsController {
-  async handle(_: Request, response: Response) {
+  async handle (_: Request, response: Response) {
     const getPostsUseCase = new GetPostsUseCase()
 
     const posts = await getPostsUseCase.execute()

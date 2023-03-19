@@ -1,9 +1,8 @@
-import { User } from "@prisma/client";
-import { AppError } from "../../../../errors/AppError";
-import { prisma } from "../../../../prisma/client";
+import { AppError } from '../../../../errors/AppError'
+import { prisma } from '../../../../prisma/client'
 
 export class GetUsersUseCase {
-  async execute() {
+  async execute () {
     const users = await prisma.user.findMany({
       select: {
         id: true,

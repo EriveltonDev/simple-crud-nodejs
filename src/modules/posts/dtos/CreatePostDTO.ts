@@ -1,4 +1,4 @@
 export interface CreatePostDTO {
-  user_id: number
+  userID: number
   content: string
 }

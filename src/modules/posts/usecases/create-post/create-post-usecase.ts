@@ -1,13 +1,12 @@
-import { AppError } from "../../../../errors/AppError"
-import { prisma } from "../../../../prisma/client"
-import { CreatePostDTO } from "../../dtos/CreatePostDTO"
+import { AppError } from '../../../../errors/AppError'
+import { prisma } from '../../../../prisma/client'
+import { type CreatePostDTO } from '../../dtos/CreatePostDTO'
 
 export class CreatePostUseCase {
-  async execute({ content, user_id }: CreatePostDTO) {
-
+  async execute ({ content, userID }: CreatePostDTO) {
     const userExist = await prisma.user.findUnique({
       where: {
-        id: user_id
+        id: userID
       }
     })
 
@@ -18,10 +17,10 @@ export class CreatePostUseCase {
     const post = prisma.post.create({
       data: {
         content,
-        author_id: user_id
+        author_id: userID
       }
     })
 
-    return post
+    return await post
   }
 }

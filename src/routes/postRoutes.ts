@@ -1,6 +1,6 @@
-import { Router } from "express"
-import { CreatePostController } from "../modules/posts/usecases/create-post/create-post-controller"
-import { GetPostsController } from "../modules/posts/usecases/get-posts/get-posts-controller"
+import { Router } from 'express'
+import { CreatePostController } from '../modules/posts/usecases/create-post/create-post-controller'
+import { GetPostsController } from '../modules/posts/usecases/get-posts/get-posts-controller'
 
 export const postRouter = Router()
 
