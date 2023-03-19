@@ -9,7 +9,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --fix",
     "postinstall": "husky install",
-    "lint-staged": "lint-staged"
+    "lint-staged": "lint-staged",
+    "docker:up": "docker compose up",
+    "docker:rebuild": "npm run docker:down; npm run docker:up",
+    "docker:logs": "docker compose logs -f",
+    "docker:down": "docker compose down"
   },
   "husky": {
     "hooks": {
