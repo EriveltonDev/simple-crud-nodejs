@@ -1,6 +1,6 @@
-import { AppError } from "../../../errors/AppError"
-import { prisma } from "../../../prisma/client"
-import { CreatePostDTO } from "../dtos/CreatePostDTO"
+import { AppError } from "../../../../errors/AppError"
+import { prisma } from "../../../../prisma/client"
+import { CreatePostDTO } from "../../dtos/CreatePostDTO"
 
 export class CreatePostUseCase {
   async execute({ content, user_id }: CreatePostDTO) {

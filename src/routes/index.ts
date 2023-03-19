@@ -4,7 +4,7 @@ import { userRouter } from './userRoutes'
 
 export const routes = Router()
 
-routes.use('/users', userRouter)
+routes.use('/user', userRouter)
 routes.use('/post', postRouter)
 
 

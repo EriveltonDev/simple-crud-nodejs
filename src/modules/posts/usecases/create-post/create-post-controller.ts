@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreatePostUseCase } from "./CreatePostUseCase";
+import { CreatePostUseCase } from "./create-post-usecase";
 
 export class CreatePostController {
   async handle(request: Request, response: Response) {
