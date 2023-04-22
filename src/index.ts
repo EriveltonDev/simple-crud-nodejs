@@ -6,9 +6,9 @@ import cors from 'cors'
 
 const server = express()
 
+server.use(cors())
 server.use(express.json())
 server.use(routes)
-server.use(cors())
 
 server.use((error: Error, request: Request, response: Response, next: NextFunction) => {
   if (error instanceof AppError) {
