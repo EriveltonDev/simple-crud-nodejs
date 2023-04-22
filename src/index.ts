@@ -2,11 +2,13 @@ import 'express-async-errors'
 import express, { type Response, type Request, type NextFunction } from 'express'
 import { routes } from './routes'
 import { AppError } from './errors/AppError'
+import cors from 'cors'
 
 const server = express()
 
 server.use(express.json())
 server.use(routes)
+server.use(cors())
 
 server.use((error: Error, request: Request, response: Response, next: NextFunction) => {
   if (error instanceof AppError) {
